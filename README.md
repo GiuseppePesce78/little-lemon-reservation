@@ -1,43 +1,69 @@
-# 🍋🍋 Little Lemon Restaurant and Reservation App
+# React + TypeScript + Vite
 
-This is a React-based reservation form for the fictional Mediterranean restaurant **Little Lemon**. Users can book a table with ease, and enjoy a responsive and aesthetically pleasing UI. Built for ease of submission and prsentation of skills for Meta- Front end- capstone project.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Features
-- Mobile responsive.
-- Uses principles of UI/UX.
-- Design Process: You can find User Jouney/Persona
-- Figma Wireframes and Prototype
-- Branding and Style guide, including color pallette
-- Custom form validation
-- Upholds Aesthetic and Home-felt Restaurant vision
-- Clean routing
-- Confirmation box on form submission
+Currently, two official plugins are available:
 
-## 🛠️ Built With
-- React.js – SPA and routing
-- React Router – Page navigation
-- CSS Flexbox/Grid – Responsive layout
-- Netlify & GitHub Pages – Deployment
-- VS Code – Code editor
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🚀 Live Demo
-GitHub Pages: https://medhasanketh.github.io/little-lemon-capstone/
-Netlify: Visit Site
+## Expanding the ESLint configuration
 
-## 📦 Setup & Run Locally
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MedhaSanketh/little-lemon-capstone.git
-   cd little-lemon-capstone
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-2. Install Dependencies
-   ```bash
-   npm install
-3. Run Locally
-   ```bash
-   npm start
-4. Build for Production
-   ```bash
-   npm run build
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
