@@ -1,15 +1,7 @@
-# Node modules
+# .gitignore
+
 node_modules/
-
-# Build output
 dist/
-
-# VS Code settings
-.vscode/
-
-# Environment variables
 .env
-
-# System files
+.vscode/
 .DS_Store
-Thumbs.db
