@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import "tailwindcss";
-@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
-@theme  {
+@theme {
   /* override default fonts */
-  --font-*:initial;
-  --font-sans:"Roboto", sans-serif;
-/* custom fonts */
-  --font-primary:"Roboto", sans-serif;
-  --font-secondary: "Cookie", cursive;
+  --font-*: initial;
+  --font-sans: 'Nunito Sans', sans-serif;
+
+  /* custom fonts */
+  --font-primary: 'Nunito Sans', sans-serif;
+  --font-secondary: 'Cookie', cursive;
 }
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -52,16 +54,20 @@
 
 :root {
   --radius: 0.625rem;
+  /* --background: oklch(1 0 0); */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  /* --primary: oklch(0.205 0 0); */
+  --primary: oklch(0.4221 0.0393 150.11);
+  --primary-foreground: oklch(0.8587 0.1736 95.22);
+  /* --secondary: oklch(0.97 0 0); */
+  --secondary: oklch(0.8587 0.1736 95.22);
+  /* --secondary-foreground: oklch(0.205 0 0); */
+  --secondary-foreground: oklch(0.4221 0.0393 150.11);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -124,7 +130,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-white text-foreground font-sans;
   }
 }
 
@@ -134,8 +140,7 @@
     height: 2.25rem;
   }
   .size-4 {
-    width: 3rem; 
+    width: 3rem;
     height: 3rem;
   }
 }
-
