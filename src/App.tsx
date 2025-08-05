@@ -1,15 +1,22 @@
 import './App.css';
-import Header from './components/Header';
 
-import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './home';
+import Prenotazione from './prenotazione';
+import MainLayout from './layouts/MainLayout';
+import ConfermaPrenotazione from './conferma-prenotazione';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <div>main content</div>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/prenotazione" element={<Prenotazione />} />
+          <Route path="/conferma-prenotazione" element={<ConfermaPrenotazione />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
