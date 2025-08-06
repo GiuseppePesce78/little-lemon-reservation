@@ -16,12 +16,13 @@ const HeroSection = () => {
             Cucina autentica, ingredienti freschi e un’esperienza
             indimenticabile.
           </p>
-          <Button
-            className="text-white my-4 text-3xl cursor-pointer shadow-2xl"
+      <Button
+        variant="secondary"
+            className="text-primary my-4 text-3xl cursor-pointer shadow-2xl"
             size="xl"
             onClick={() => (window.location.href = '/prenotazione')}
           >
-            Prenota ora il tuo tavolo
+            Prenota ora 
           </Button>
           
         </div>
