@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.css";
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './home';
-import Prenotazione from './prenotazione';
-import MainLayout from './layouts/MainLayout';
-import ConfermaPrenotazione from './conferma-prenotazione';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import Prenotazione from "./pages/booking";
+import MainLayout from "./layouts/MainLayout";
+import ConfermaPrenotazione from "./pages/booking-confirmation";
 
 function App() {
   return (
@@ -13,7 +13,10 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/prenotazione" element={<Prenotazione />} />
-          <Route path="/conferma-prenotazione" element={<ConfermaPrenotazione />} />
+          <Route
+            path="/conferma-prenotazione"
+            element={<ConfermaPrenotazione />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

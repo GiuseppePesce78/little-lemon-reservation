@@ -1,6 +1,6 @@
-import { BookingForm } from '@/components/BookingForm';
-import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from 'react-icons/md';
+import { BookingForm } from "@/components/pages/booking/BookingForm";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from "react-icons/md";
 
 const Prenotazione = () => {
   return (
@@ -13,7 +13,7 @@ const Prenotazione = () => {
       <CardContent>
         <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto px-4">
           {/* Info Contatti */}
-          <div className="w-full md:w-1/3  p-6  space-y-8 order-1 md:order-2">
+          <div className="w-full sm:w-1/3  p-6  space-y-8 order-1 md:order-2">
             <div className="flex items-center space-x-4">
               <MdLocationOn className="text-2xl text-primary" />
               <div>
