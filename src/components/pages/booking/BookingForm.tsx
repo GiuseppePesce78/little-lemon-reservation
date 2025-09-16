@@ -1,77 +1,122 @@
 // src/components/BookingForm.tsx
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { bookingSchema } from '@/lib/booking-form-schema';
-import { z } from 'zod';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { bookingSchema } from "@/lib/booking-form-schema";
+import { z } from "zod";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage
-} from '@/components/ui/form';
-import { useNavigate } from 'react-router-dom';
+  FormMessage,
+} from "@/components/ui/form";
+import { useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 type BookingData = z.infer<typeof bookingSchema>;
+
+type InputWithErrorProps = React.ComponentProps<typeof Input> & {
+  error?: boolean;
+};
+
+export function InputWithError({
+  error,
+  className,
+  ...props
+}: InputWithErrorProps) {
+  console.log(props);
+  const isError = error || props["aria-invalid"] === "true";
+  const isValid = !isError && !!props.value;
+  return (
+    <Input
+      {...props}
+      className={cn(
+        "h-14 text-2xl rounded-md px-3 py-2",
+        isError &&
+          "border-red-500 focus:border-red-500 focus-visible:ring-red-200",
+        isValid && "border-green-500 focus-visible:ring-green-500",
+        className
+      )}
+    />
+  );
+}
 
 export function BookingForm() {
   const form = useForm<BookingData>({
     resolver: zodResolver(bookingSchema),
+    mode: "onChange",
     defaultValues: {
-      name: '',
-      email: '',
-      date: '',
-      time: '',
-      guests: 2
-    }
+      name: "",
+      email: "",
+      date: "",
+      time: "",
+      guests: 1,
+    },
+
+    shouldFocusError: false, //necessario per rimuovere il focus automatico sul primo field
   });
 
+  const date = form.watch("date");
+  const time = form.watch("time");
+
   const navigate = useNavigate();
+
+  /* handlesubmit */
   const onSubmit = (data: BookingData) => {
-    console.log('Dati prenotazione:', data);
-    // qui invieresti i dati a un backend, ad esempio
-    navigate('/conferma-prenotazione');
+    console.log("Dati prenotazione:", data);
+    navigate("/conferma-prenotazione");
   };
+
+  useEffect(() => {
+    if (date && time) {
+      form.trigger("time"); // ricalcola il refine cross-field agganciato al campo time
+    }
+  }, [date, time, form]);
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="mx-auto w-full max-w-3xl px-4 py-8 space-y-6 text-center"
+        noValidate
       >
-        <div className="flex flex-col md:flex-row md:items-end md:gap-4 space-y-6 md:space-y-0 ">
+        <div className="flex flex-col md:flex-row md:items-top md:gap-4 space-y-6 md:space-y-0">
           {/* Name */}
           <div className="md:flex-1">
             <FormField
               control={form.control}
               name="name"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
-                  
-                  <Input
-                    placeholder="Mario Rossi"
+                  <InputWithError
+                    type="email"
                     {...field}
-                    className="h-14 text-2xl"
+                    placeholder="Mario Rossi"
+                    error={!!fieldState.error}
                   />
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
+
           {/* Email */}
           <div className="md:flex-1">
             <FormField
               control={form.control}
               name="email"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
-                  <Input
-                    placeholder="email@example.com"
+                  <InputWithError
+                    type="email"
+                    required
                     {...field}
-                    className="h-14 text-2xl"
+                    placeholder="email@email.it"
+                    error={!!fieldState.error}
                   />
                   <FormMessage />
                 </FormItem>
@@ -80,16 +125,20 @@ export function BookingForm() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-end md:gap-4 space-y-6 md:space-y-0">
+        <div className="flex flex-col md:flex-row md:items-top md:gap-4 space-y-6 md:space-y-0">
           <div className="md:flex-1">
             <FormField
               control={form.control}
               name="time"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
                   <FormLabel>Orario prenotazione</FormLabel>
                   <FormControl>
-                    <Input type="time" {...field} className="h-14 text-2xl" />
+                    <InputWithError
+                      {...field}
+                      type="time"
+                      error={!!fieldState.error}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,7 +151,7 @@ export function BookingForm() {
             <FormField
               control={form.control}
               name="guests"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
                   <FormLabel>Numero di persone</FormLabel>
                   <div className="flex justify-between items-center gap-2">
@@ -118,14 +167,13 @@ export function BookingForm() {
                     >
                       −
                     </Button>
-
-                    <Input
+                    <InputWithError
                       type="text"
-                      value={field.value?.toString() ?? ''}
-                      readOnly
-                      className="h-14 text-center pointer-events-none text-2xl "
+                      className="text-center"
+                      required
+                      {...field}
+                      error={!!fieldState.error}
                     />
-
                     <Button
                       type="button"
                       onClick={() => {
@@ -151,11 +199,16 @@ export function BookingForm() {
             <FormField
               control={form.control}
               name="date"
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem>
                   <FormLabel>Data</FormLabel>
                   <FormControl className="flex justify-end">
-                    <Input type="date" {...field} className="h-14 text-end text-2xl" min={new Date().toISOString().split('T')[0]} />
+                    <InputWithError
+                      {...field}
+                      type="date"
+                      min={new Date().toISOString().split("T")[0]}
+                      error={!!fieldState.error}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -163,6 +216,7 @@ export function BookingForm() {
             />
           </div>
         </div>
+
         {/* Note */}
         <FormField
           control={form.control}

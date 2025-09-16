@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   /* override default fonts */
   --font-*: initial;
-  --font-sans: 'Nunito Sans', sans-serif;
+  --font-sans: "Nunito Sans", sans-serif;
 
   /* custom fonts */
-  --font-primary: 'Nunito Sans', sans-serif;
-  --font-secondary: 'Cookie', cursive;
+  --font-primary: "Nunito Sans", sans-serif;
+  --font-secondary: "Cookie", cursive;
 }
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -142,5 +142,19 @@
   .size-4 {
     width: 3rem;
     height: 3rem;
+  }
+}
+
+@layer component {
+  .bred {
+    @apply border-2 border-red-500;
+  }
+
+  .input-base {
+    @apply h-14 text-2xl rounded-md border px-3 py-2;
+  }
+
+  .input-error {
+    @apply border-red-500 focus-visible:ring-red-500;
   }
 }
