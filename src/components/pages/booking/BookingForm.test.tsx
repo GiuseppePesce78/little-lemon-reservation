@@ -9,11 +9,14 @@ describe("BookingForm", () => {
         <BookingForm />
       </MemoryRouter>
     );
+
     // Cerca tramite placeholder
     expect(screen.getByPlaceholderText(/mario rossi/i)).toBeInTheDocument();
+
     expect(
       screen.getByPlaceholderText(/email@example.com/i)
     ).toBeInTheDocument();
+
     expect(
       screen.getByPlaceholderText(/eventuali richieste/i)
     ).toBeInTheDocument();

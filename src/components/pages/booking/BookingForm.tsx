@@ -115,7 +115,7 @@ export function BookingForm() {
                     type="email"
                     required
                     {...field}
-                    placeholder="email@email.it"
+                    placeholder="email@example.com"
                     error={!!fieldState.error}
                   />
                   <FormMessage />
