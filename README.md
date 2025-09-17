@@ -80,7 +80,7 @@ public/                            # Immagini e file statici
 
 ### Core Technologies
 
-- [![React version](https://img.shields.io/badge/React-19.1.0-blue)] – [Official Documentation](https://reactjs.org/docs/getting-started.html)
+- [React version](https://img.shields.io/badge/React-19.1.0-blue) – [Official Documentation](https://reactjs.org/docs/getting-started.html)
 - **Vite** – [Official Guide](https://vitejs.dev/guide/)
 - **Tailwind CSS** – [Docs](https://tailwindcss.com/docs)
 - **shadcn/ui** – [Component Library](https://ui.shadcn.com/)
