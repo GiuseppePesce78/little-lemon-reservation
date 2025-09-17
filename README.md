@@ -69,12 +69,33 @@ public/                            # Immagini e file statici
 
 ## Tech Stack
 
-- [React](https://reactjs.org/) – Libreria principale per creare componenti riutilizzabili e gestire lo stato dell’interfaccia utente.
-- [Vite](https://vitejs.dev/) – Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
-- [shadcn/ui](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
-- [Zod](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
-- [React Hook Form](https://react-hook-form.com/) – Libreria per la **gestione dei form in React**, integrata con Zod per validazioni semplici ed efficaci e ottimizzazione delle performance del form.
+- [![React version](https://img.shields.io/badge/React-19.1.0-blue)](https://reactjs.org/) - Libreria principale per creare componenti riutilizzabili e gestire lo stato dell’interfaccia utente.
+- [![Vite](https://img.shields.io/badge/Vite-7.0.4-green)](https://vitejs.dev/) - Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
+- [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-cyan)](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
+- [![Shadcn/ui](https://img.shields.io/badge/ShadcnUi-0.0.1-black)](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
+- [![Zod](https://img.shields.io/badge/Zod-4.0.5-red)](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
+- [![React Hook Form](https://img.shields.io/badge/ReactHookForm-7.60.0-pink)](https://react-hook-form.com/) – Libreria per la **gestione dei form in React**, integrata con Zod per validazioni semplici ed efficaci e ottimizzazione delle performance del form.
+
+## 📚 Resources & Tools
+
+### Core Technologies
+
+- ![React version](https://img.shields.io/badge/React-19.1.0-blue) – [Official Documentation](https://reactjs.org/docs/getting-started.html)
+- ![Vite](https://img.shields.io/badge/Vite-7.0.4-green) – [Official Guide](https://vitejs.dev/guide/)
+- ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-cyan) – [Docs](https://tailwindcss.com/docs)
+- ![Shadcn/ui](https://img.shields.io/badge/ShadcnUi-0.0.1-black) – [Component Library](https://ui.shadcn.com/)
+- ![Zod](https://img.shields.io/badge/Zod-4.0.5-red) – [Schema Validation](https://zod.dev/)
+- ![React Hook Form](https://img.shields.io/badge/ReactHookForm-7.60.0-pink) – [Getting Started](https://react-hook-form.com/get-started)
+
+### Additional Tools
+
+- **Testing Library** – [Docs](https://testing-library.com/)
+- **ESLint / Prettier** – Code quality & formatting
+- **Netlify** – Deployment platform
+
+### Learning Resources
+
+- [Meta Front-End Developer Professional Certificate on Coursera](https://www.coursera.org/professional-certificates/meta-front-end-developer)
 
 ## Componenti e Validazioni
 
