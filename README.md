@@ -72,9 +72,9 @@ public/                            # Immagini e file statici
 - [![React version](https://img.shields.io/badge/React-19.1.0-blue)](https://reactjs.org/) - Libreria principale per creare componenti riutilizzabili e gestire lo stato dell’interfaccia utente.
 - [![Vite](https://img.shields.io/badge/Vite-7.0.4-green)](https://vitejs.dev/) - Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
 - [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-cyan)](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
-- [![Shadcn/ui](https://img.shields.io/badge/shadcnUi-4.1.11-violet)](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
-- [Zod](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
-- [React Hook Form](https://react-hook-form.com/) – Libreria per la **gestione dei form in React**, integrata con Zod per validazioni semplici ed efficaci e ottimizzazione delle performance del form.
+- [![Shadcn/ui](https://img.shields.io/badge/shadcnUi-0.0.1-black)](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
+- [![Zod](https://img.shields.io/badge/Zod-0.0.1-black)](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
+- [![React Hook Form](https://img.shields.io/badge/ReactHookForm-7.60.0-pink)](https://react-hook-form.com/) – Libreria per la **gestione dei form in React**, integrata con Zod per validazioni semplici ed efficaci e ottimizzazione delle performance del form.
 
 ## 📚 Resources & Tools
 
