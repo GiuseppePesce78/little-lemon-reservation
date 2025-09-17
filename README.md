@@ -70,8 +70,7 @@ public/                            # Immagini e file statici
 ## Tech Stack
 
 - [![React version](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/) ibreria principale per creare componenti riutilizzabili e gestire lo stato dell’interfaccia utente.
-- [![Vite](https://img.shields.io/badge/Vite-7.0.4-green)](https://reactjs.org/)
-- [Vite](https://vitejs.dev/) – Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
+- [![Vite](https://img.shields.io/badge/Vite-7.0.4-green)](https://vitejs.dev/) Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
 - [shadcn/ui](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
 - [Zod](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
