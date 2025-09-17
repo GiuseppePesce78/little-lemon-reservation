@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 /* Definisco gli orari consenti per la prenotazione */
-const OPENING_HOUR = 10; // 12:00
+const OPENING_HOUR = 12; // 12:00
 const CLOSING_HOUR = 23; // 23:00
 
 /* Definisco il numero minimo e massimo consentito per prenotare  */
