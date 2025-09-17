@@ -69,7 +69,7 @@ public/                            # Immagini e file statici
 
 ## Tech Stack
 
-- [React](https://reactjs.org/) ![React version](https://img.shields.io/badge/React-18.2.0-blue) – Core library for building reusable components and managing UI state.
+- ![React version](https://img.shields.io/badge/React-18.2.0-blue) – Core library for building reusable components and managing UI state.
 - [React](https://reactjs.org/) – Libreria principale per creare componenti riutilizzabili e gestire lo stato dell’interfaccia utente.
 - [Vite](https://vitejs.dev/) – Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
