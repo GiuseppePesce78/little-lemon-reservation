@@ -73,7 +73,7 @@ public/                            # Immagini e file statici
 - [![Vite](https://img.shields.io/badge/Vite-7.0.4-green)](https://vitejs.dev/) - Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
 - [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-cyan)](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
 - [![Shadcn/ui](https://img.shields.io/badge/shadcnUi-0.0.1-black)](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
-- [![Zod](https://img.shields.io/badge/Zod-0.0.1-black)](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
+- [![Zod](https://img.shields.io/badge/Zod-4.0.5-red)](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
 - [![React Hook Form](https://img.shields.io/badge/ReactHookForm-7.60.0-pink)](https://react-hook-form.com/) – Libreria per la **gestione dei form in React**, integrata con Zod per validazioni semplici ed efficaci e ottimizzazione delle performance del form.
 
 ## 📚 Resources & Tools
@@ -81,11 +81,11 @@ public/                            # Immagini e file statici
 ### Core Technologies
 
 - ![React version](https://img.shields.io/badge/React-19.1.0-blue) – [Official Documentation](https://reactjs.org/docs/getting-started.html)
-- **Vite** – [Official Guide](https://vitejs.dev/guide/)
-- **Tailwind CSS** – [Docs](https://tailwindcss.com/docs)
-- **shadcn/ui** – [Component Library](https://ui.shadcn.com/)
-- **Zod** – [Schema Validation](https://zod.dev/)
-- **React Hook Form** – [Getting Started](https://react-hook-form.com/get-started)
+- ![Vite](https://img.shields.io/badge/Vite-7.0.4-green) – [Official Guide](https://vitejs.dev/guide/)
+- ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.11-cyan) – [Docs](https://tailwindcss.com/docs)
+- ![Shadcn/ui](https://img.shields.io/badge/shadcnUi-0.0.1-black) – [Component Library](https://ui.shadcn.com/)
+- ![Zod](https://img.shields.io/badge/Zod-4.0.5-red) – [Schema Validation](https://zod.dev/)
+- ![React Hook Form](https://img.shields.io/badge/ReactHookForm-7.60.0-pink) – [Getting Started](https://react-hook-form.com/get-started)
 
 ### Additional Tools
 
