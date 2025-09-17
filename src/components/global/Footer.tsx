@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -52,7 +52,7 @@ const Footer = () => {
           <ul>
             <li>Email: info@littlelemon.it</li>
             <li>Telefono: +39 06 1234567</li>
-            <li className='flex gap-4 mt-4'>
+            <li className="flex gap-4 mt-4">
               <a
                 href="#"
                 aria-label="Facebook"

@@ -68,7 +68,7 @@ export function BookingForm() {
   /* handlesubmit */
   const onSubmit = (data: BookingData) => {
     console.log("Dati prenotazione:", data);
-    navigate("/conferma-prenotazione");
+    navigate("/conferma-prenotazione", { state: data });
   };
 
   useEffect(() => {

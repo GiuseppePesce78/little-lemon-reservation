@@ -4,7 +4,7 @@ import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from "react-icons/md";
 
 const Prenotazione = () => {
   return (
-    <section aria-labelledby="hero-title" className="mb-12">
+    <section aria-labelledby="hero-title" className="mb-12 py-6">
       <CardHeader>
         <CardTitle asChild className="mx-auto text-5xl">
           <h1>Prenota il tuo tavolo</h1>

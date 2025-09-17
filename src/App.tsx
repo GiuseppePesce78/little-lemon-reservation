@@ -13,11 +13,11 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/prenotazione" element={<Prenotazione />} />
-          <Route
-            path="/conferma-prenotazione"
-            element={<ConfermaPrenotazione />}
-          />
         </Route>
+        <Route
+          path="/conferma-prenotazione"
+          element={<ConfermaPrenotazione />}
+        />
       </Routes>
     </BrowserRouter>
   );
