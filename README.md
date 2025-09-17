@@ -21,7 +21,7 @@ L’obiettivo principale è stato realizzare un’applicazione front-end che per
 
 Il progetto non è un prodotto commerciale ma una **capstone project application**, pensata per dimostrare competenze pratiche in **React, gestione dello stato, validazioni dei form e responsive design**.
 
-> **View demo:** [Little Lemon Restaurant]()
+> **View demo:** [Little Lemon Restaurant](https://little-lemon-testing.netlify.app/)
 
 ### 📂 Struttura del progetto
 
