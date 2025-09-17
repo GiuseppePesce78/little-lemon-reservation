@@ -60,20 +60,21 @@ public/                            # Immagini e file statici
 
 ## Features
 
-- 📅 **Sistema di prenotazione**: consente agli utenti di selezionare data e orario, con validazioni avanzate tramite Zod.
-- 🍽️ **Menu dinamico e responsive**: visualizzazione dei piatti suddivisi per categorie, ottimizzata per desktop e dispositivi mobili.
-- 🎨 **UI moderna e coerente**: sviluppo di componenti riutilizzabili con Tailwind CSS e shadcn/ui.
-- 📱 **Responsive design**: layout adattivo per smartphone, tablet e desktop.
-- ⚡ **Performance ottimizzate**: grazie a React e Vite, caricamento rapido e esperienza utente fluida.
-- 🧪 **Testing**: configurazione di test base con `setupTests.ts` per garantire la stabilità dei componenti critici.
+- **Sistema di prenotazione**: consente agli utenti di selezionare data e orario, con validazioni avanzate tramite Zod.
+- **Menu dinamico e responsive**: visualizzazione dei piatti suddivisi per categorie, ottimizzata per desktop e dispositivi mobili.
+- **UI moderna e coerente**: sviluppo di componenti riutilizzabili con Tailwind CSS e shadcn/ui.
+- **Responsive design**: layout adattivo per smartphone, tablet e desktop.
+- **Performance ottimizzate**: grazie a React e Vite, caricamento rapido e esperienza utente fluida.
+- **Testing**: configurazione di test base con `setupTests.ts` per garantire la stabilità dei componenti critici.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - [React](https://reactjs.org/) – Libreria principale per creare componenti riutilizzabili e gestire lo stato dell’interfaccia utente.
 - [Vite](https://vitejs.dev/) – Bundler e tool di sviluppo veloce, con hot-reload e build ottimizzate.
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework per uno stile moderno e responsive.
 - [shadcn/ui](https://ui.shadcn.com/) – Libreria di componenti UI pronta all’uso, impiegata per velocizzare lo sviluppo di elementi comuni come button, card e sheet.
 - [Zod](https://zod.dev/) – Libreria per le **validazioni dei form**, usata per garantire che gli input delle prenotazioni rispettino regole di formato e coerenza.
+- [React Hook Form](https://react-hook-form.com/) – Libreria per la **gestione dei form in React**, integrata con Zod per validazioni semplici ed efficaci e ottimizzazione delle performance del form.
 
 ## Componenti e Validazioni
 
@@ -93,6 +94,16 @@ Per la gestione dei form e la validazione dei dati è stata utilizzata **Zod**, 
 - Definire **schemi di validazione** chiari e riutilizzabili per ogni form.
 - Controllare che gli utenti inseriscano dati coerenti, come date e orari validi per le prenotazioni.
 - Integrare facilmente la validazione con React e i componenti del form, mostrando messaggi di errore in tempo reale.
+
+### React Hook Form + Zod
+
+Per la gestione dei form di prenotazione è stata utilizzata **React Hook Form**, che permette di:
+
+- Gestire facilmente lo stato dei form senza ricaricare l’interfaccia.
+- Integrare la validazione dei campi in combinazione con **Zod**.
+- Mostrare errori in tempo reale e semplificare l’invio dei dati.
+
+In pratica, React Hook Form si occupa della gestione dello stato del form e Zod valida i dati secondo schemi predefiniti, rendendo il processo efficiente e scalabile.
 
 ## Getting Started
 
