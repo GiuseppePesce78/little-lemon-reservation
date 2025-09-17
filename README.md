@@ -8,7 +8,7 @@ L’obiettivo era applicare in un progetto reale le competenze acquisite durante
 
 ---
 
-<img src="https://github.com/GiuseppePesce78/little-lemon-reservation/blob/readme-structure/src/assets/readme-cover.jpg" alt="Website Screenshot">
+<img src="https://github.com/GiuseppePesce78/little-lemon-reservation/blob/readme-structure/readme-cover.jpg" alt="Website Screenshot">
 
 ## 🏡 Cos'è Little Lemon?
 
@@ -33,7 +33,6 @@ src/
 ├── main.tsx                       # Entry point dell’app
 ├── setupTests.ts                  # Configurazione test
 ├── vite-env.d.ts                  # Tipi TypeScript per Vite
-├── assets/                        # Immagini e file statici
 ├── components/                    # Componenti React riutilizzabili
 │   ├── global/                    # Componenti globali (Header, Footer, Nav)
 │   ├── pages/                     # Componenti specifici delle pagine
@@ -46,12 +45,13 @@ src/
    ├── booking/                    # Pagina prenotazione
    ├── booking-confirmation/       # Pagina conferma prenotazione
    └── home/                       # Pagina home
+public/                            # Immagini e file statici
 
 ```
 
 #### Descrizioni sintetiche delle cartelle principali
 
-- **assets/** → immagini e file statici usati nell’app.
+- **public/** → immagini e file statici usati nell’app.
 - **components/** → componenti React riutilizzabili, organizzati in `global`, `pages` e `ui`.
 - **layouts/** → layout principali dell’app (es. MainLayout).
 - **lib/** → logica di supporto, come validazioni dei form e funzioni helper.
