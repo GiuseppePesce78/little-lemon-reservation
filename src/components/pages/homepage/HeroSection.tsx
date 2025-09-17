@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative w-full bg-[url('/src/assets/hero-background.jpg')] bg-cover bg-center text-white py-32"
+      className="relative w-full bg-[url('/hero-background.jpg')] bg-cover bg-center text-white py-32"
     >
       {/* Overlay scuro */}
       <div className="absolute inset-0 bg-black/50 z-0" />

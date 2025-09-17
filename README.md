@@ -21,7 +21,7 @@ L’obiettivo principale è stato realizzare un’applicazione front-end che per
 
 Il progetto non è un prodotto commerciale ma una **capstone project application**, pensata per dimostrare competenze pratiche in **React, gestione dello stato, validazioni dei form e responsive design**.
 
-> **View demo:** [studio admin](https://next-shadcn-admin-dashboard.vercel.app)
+> **View demo:** [Little Lemon Restaurant]()
 
 ### 📂 Struttura del progetto
 
@@ -115,4 +115,4 @@ Segui le istruzioni per avviare il tuo progetto
    npm run dev
    ```
 
-Appena avviata, l'app saraà disponibile su [http://localhost:5173](http://localhost:5173)
+Appena avviata, l'app sarà disponibile su [http://localhost:5173](http://localhost:5173)
