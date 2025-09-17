@@ -8,7 +8,7 @@ L’obiettivo era applicare in un progetto reale le competenze acquisite durante
 
 ---
 
-<img src="https://github.com/GiuseppePesce78/little-lemon-reservation/tree/readme-structure/src/assets/readme-cover.jpg" alt="Website Screenshot">
+<img src="https://github.com/GiuseppePesce78/little-lemon-reservation/blob/readme-structure/src/assets/readme-cover.jpg" alt="Website Screenshot">
 
 ## 🏡 Cos'è Little Lemon?
 
